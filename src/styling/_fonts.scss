@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "HK Grotesk";
+  src: url("/assets/fonts/hk-grotesk/HKGrotesk-Regular.woff") format("woff"),
+      url("/assets/fonts/hk-grotesk/HKGrotesk-Regular.woff2") format("woff2"),
+      url("/assets/fonts/hk-grotesk/HKGrotesk-Regular.ttf") format("ttf"),
+      url("/assets/fonts/hk-grotesk/HKGrotesk-Regular.svg") format("svg"),
+      url("/assets/fonts/hk-grotesk/HKGrotesk-Regular.eot") format("eot");
+}
+
+@font-face {
+  font-family: "HK Grotesk Bold";
+  src: url("/assets/fonts/hk-grotesk/HKGrotesk-Bold.woff") format("woff"),
+      url("/assets/fonts/hk-grotesk/HKGrotesk-Bold.woff2") format("woff2"),
+      url("/assets/fonts/hk-grotesk/HKGrotesk-Bold.ttf") format("ttf"),
+      url("/assets/fonts/hk-grotesk/HKGrotesk-Bold.svg") format("svg"),
+      url("/assets/fonts/hk-grotesk/HKGrotesk-Bold.eot") format("eot");
+}
+
+.grotesk {
+  font-style: normal;
+  &-regular {
+    font-family: 'HK Grotesk';
+    font-weight: normal;
+  }
+  &-bold {
+    font-family: 'HK Grotesk Bold';
+    font-weight: bold;
+  }
+}
+
+* {
+  @extend .grotesk;
+}

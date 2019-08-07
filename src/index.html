@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/mediauploader.esm.js"></script>
+  <script nomodule src="/build/mediauploader.js"></script>
+
+</head>
+<body>
+
+  <!--
+    Here we use the drop-area componet with a script attached in order
+    to safely and easily declare the required configuration
+    -
+    Please note that if the configuration isn't provided then the component
+    will throw an error
+  -->
+  <drop-area></drop-area>
+  <!-- SERVER SIDE UPLOAD CONFIG -->
+  <!-- <script>
+    const dropArea = document.querySelector('drop-area');
+    dropArea.config = {
+      uploadServerSide: true,
+      serverSideURL: 'http://localhost:8080/medias',
+      formDataFileName: 'file',
+    };
+  </script> -->
+  <!-- FRONT SIDE UPLOAD CONFIG - signed url s3 -->
+  <script>
+    const dropArea = document.querySelector('drop-area');
+    dropArea.config = {
+      uploadServerSide: false,
+      frontSideURL: 'http://localhost:8080/medias/url',
+      formDataFileName: 'file',
+    };
+  </script>
+
+</body>
+</html>
